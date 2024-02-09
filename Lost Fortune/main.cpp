@@ -1,6 +1,6 @@
 #include <iostream>
-using std::cout;
 using std::cin;
+using std::cout;
 using std::endl;
 using std::string;
 
@@ -14,7 +14,7 @@ int main()
 
     cout << "Welcome to Lost Fortune\n\n";
     cout << "Please enter the following for your personalized adventure\n";
-    
+
     cout << "Please enter a number: ";
     cin >> adventurers;
 
