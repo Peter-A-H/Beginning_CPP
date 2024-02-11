@@ -9,11 +9,11 @@ int main()
 {
     srand((unsigned)time(NULL));
 
-    int secretNumber = (rand() % 100) + 1; //17
-    int maxValue = 100;
-    int minValue = 0;
-    int difference = 0;
-    int guess = 0;
+    int secretNumber = (rand() % 100) + 1;
+    int maxValue = 100, 
+    int minValue = 0, 
+    int difference = 0, 
+    int guess = 0, 
     int tries = 0;
 
     cout << "\tWelcome to Guess My Number\n\n"
@@ -21,9 +21,8 @@ int main()
 
     cin >> secretNumber;
 
-    while (true) 
+    while (guess != secretNumber) 
     { 
-        if (guess == secretNumber) break;
         ++tries;
 
         if (guess > secretNumber)
@@ -42,7 +41,7 @@ int main()
         }
     }
 
-    cout << "\nThat's it! The computer got it in " << tries << " guesses!\n";
+    cout << "\n" << guess << "! The computer got it in " << tries << " guesses!\n";
 
     return 0;
 }
