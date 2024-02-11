@@ -10,11 +10,11 @@ int main()
     srand((unsigned)time(NULL));
 
     int secretNumber = (rand() % 100) + 1;
-    int maxValue = 100, 
-    int minValue = 0, 
-    int difference = 0, 
-    int guess = 0, 
-    int tries = 0;
+    int maxValue = 100;
+    int minValue = 0;
+    int difference = 0;
+    int guess = (maxValue - minValue) / 2;
+    int tries = 1;
 
     cout << "\tWelcome to Guess My Number\n\n"
          << "Pick a number between 0-100: ";
@@ -23,8 +23,6 @@ int main()
 
     while (guess != secretNumber) 
     { 
-        ++tries;
-
         if (guess > secretNumber)
         {
             cout << "\n" << guess << " is too high!\n";
@@ -39,6 +37,8 @@ int main()
             difference = maxValue - minValue;
             guess += difference / 2;
         }
+
+        ++tries;
     }
 
     cout << "\n" << guess << "! The computer got it in " << tries << " guesses!\n";
